@@ -1,0 +1,21 @@
+{% load blog_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+</head>
+<body>
+    {% function 4 as f %}
+    <h1>test: {{f}}</h1>
+    <p>the total number of published posts is: {% postsnum %}</p>
+    {% posts as allposts %}
+    {% for post in allposts %}
+    <p>{{post.title}}</p>
+    {% endfor %}
+    <h1>latest posts:</h1>
+    {% latestposts %}
+</body>
+</html>
