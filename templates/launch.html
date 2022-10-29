@@ -1,6 +1,8 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html>
+{% compress css %}
 <style>
 body, html {
   height: 100%;
@@ -43,6 +45,7 @@ hr {
   width: 40%;
 }
 </style>
+{% endcompress %}
 <body>
 
 <div class="bgimg">
@@ -62,7 +65,7 @@ hr {
     <p>Made by Zahra :)</p>
   </div>
 </div>
-
+{% compress js %}
 <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Nov 30, 2022 15:37:25").getTime();
@@ -93,6 +96,6 @@ var countdownfunction = setInterval(function() {
   }
 }, 1000);
 </script>
-
+{% endcompress %}
 </body>
 </html>

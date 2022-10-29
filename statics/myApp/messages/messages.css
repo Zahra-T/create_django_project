@@ -1,0 +1,13 @@
+.alert.alert-dismissible.alert-success {
+  box-sizing: content-box;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}
+
+.alert.alert-dismissible.alert-danger {
+  box-sizing: content-box;
+  width: 30%;
+  margin: auto;
+  text-align: center;
+}

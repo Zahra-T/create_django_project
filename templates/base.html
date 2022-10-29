@@ -1,4 +1,5 @@
 {% load static %}
+{% load compress %}
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
   <head>
@@ -27,11 +28,9 @@
     <!--
 			CSS
 			============================================= -->
+    {% compress css %}
     <link rel="stylesheet" href="{% static 'myApp/css/linearicons.css' %}" />
-    <link
-      rel="stylesheet"
-      href="{% static 'myApp/css/font-awesome.min.css' %}"
-    />
+    <link rel="stylesheet" href="{% static 'myApp/css/font-awesome.min.css' %}"/>
     <link rel="stylesheet" href="{% static 'myApp/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'myApp/css/magnific-popup.css' %}" />
     <link rel="stylesheet" href="{% static 'myApp/css/jquery-ui.css' %}" />
@@ -39,7 +38,7 @@
     <link rel="stylesheet" href="{% static 'myApp/css/animate.min.css' %}" />
     <link rel="stylesheet" href="{% static 'myApp/css/owl.carousel.css' %}" />
     <link rel="stylesheet" href="{% static 'myApp/css/main.css' %}" />
-    
+    {% endcompress %}
 
     
   </head>
@@ -206,11 +205,13 @@
       </div>
     </footer>
     <!-- End footer Area -->
-
+    {% compress js %}
     <script src="{% static 'myApp/js/vendor/jquery-2.2.4.min.js' %}"></script>
     <script src="{% static 'myApp/js/popper.min.js' %}"></script>
     <script src="{% static 'myApp/js/vendor/bootstrap.min.js' %}"></script>
+    {% endcompress %}
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+    {% compress js %}
     <script src="{% static 'myApp/js/jquery-ui.js' %}"></script>
     <script src="{% static 'myApp/js/easing.min.js' %}"></script>
     <script src="{% static 'myApp/js/hoverIntent.js' %}"></script>
@@ -221,5 +222,6 @@
     <script src="{% static 'myApp/js/owl.carousel.min.js' %}"></script>
     <script src="{% static 'myApp/js/mail-script.js' %}"></script>
     <script src="{% static 'myApp/js/main.js' %}"></script>
+  {% endcompress %}
   </body>
 </html>
