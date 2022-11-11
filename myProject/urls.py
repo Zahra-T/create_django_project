@@ -34,7 +34,7 @@ sitemaps = {
 urlpatterns = [
     
     path('admin/', admin.site.urls),
-    re_path(r'^', launch_view),
+    #re_path(r'^', launch_view),
     path('',include('myApp.urls')),
     path('blog/', include('myBlog.urls')),
     path('message', message_view),

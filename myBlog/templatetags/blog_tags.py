@@ -1,4 +1,3 @@
-from telnetlib import STATUS
 from django import template
 from myBlog.models import Category, Post, Comment
 register=template.Library()
